@@ -1,0 +1,5 @@
+{
+    "yaml.schemas": {
+        "kubernetes://schema/apps/v1@deployment": "file:///home/maazin-ahmed/Devops/K8s/Eivor/k8s/deployment.yaml"
+    }
+}

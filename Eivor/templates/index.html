@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Eivor: The Great Viking</title>
+</head>
+<body>
+    #print values using a loop from a dictionary using jinja
+
+
+    {% for key, value in env.items() %}
+        <p><strong>{{ key }}:</strong> {{ value }}</p>
+    {% endfor %}
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #000;
+            margin: 0;
+            padding: 20px;
+        }
+
+        h1 {
+            color: #33FF33;
+        }
+
+        p {
+            color: #FFD700;
+        }
+    </style>
+</body>
+
+</html>
