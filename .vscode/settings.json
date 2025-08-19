@@ -1,5 +1,6 @@
 {
     "yaml.schemas": {
-        "kubernetes://schema/apps/v1@deployment": "file:///home/maazin-ahmed/Devops/K8s/Eivor/k8s/deployment.yaml"
+        "kubernetes://schema/apps/v1@deployment": "file:///home/maazin-ahmed/Devops/K8s/Eivor/k8s/deployment.yaml",
+        "kubernetes://schema/v1@service": "file:///home/maazin-ahmed/Devops/K8s/Eivor/k8s/service.yaml"
     }
 }
