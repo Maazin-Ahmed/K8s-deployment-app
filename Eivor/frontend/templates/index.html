@@ -8,6 +8,9 @@
 <body>
     #print values using a loop from a dictionary using jinja
 
+    {% for name in data %}
+        <p>{{ name }}</p>
+    {% endfor %}
 
     {% for key, value in env.items() %}
         <p><strong>{{ key }}:</strong> {{ value }}</p>

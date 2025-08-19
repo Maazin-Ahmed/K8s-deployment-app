@@ -19,3 +19,6 @@ spec:
         image: docker.io/maazinahmed/eivor:latest        
         ports:
         - containerPort: 5000
+        env:
+          - name: tree
+            value: morphine 
