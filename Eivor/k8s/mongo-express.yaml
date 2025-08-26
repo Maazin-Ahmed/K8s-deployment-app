@@ -15,9 +15,9 @@ spec:
       containers:
       - name: mongo-express
         image: docker.io/mongo-express
-      env:
-      - name: ME_CONFIG_MONGODB_SERVER
-        value: mongo.ezio.svc.cluster.local
+        env:
+        - name: ME_CONFIG_MONGODB_SERVER
+          value: mongo.ezio.svc.cluster.local
         ports:
         - containerPort: 8081
 ---
@@ -29,6 +29,6 @@ spec:
   selector:
     app: mongo-express 
   ports:
-  - port: 80
+  - port: 80 
     targetPort: 8081
 

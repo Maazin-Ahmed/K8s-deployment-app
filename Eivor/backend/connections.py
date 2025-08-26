@@ -1,7 +1,12 @@
 #mongo connection
 
 from pymongo import MongoClient
+from os import environ
 
-client = MongoClient("mongodb://localhost:27017/")
+MONGO_HOST = environ.get("MONGO_HOST", "localhost")
+
+
+
+client = MongoClient(MONGO_HOST, 27017 )
 db = client["eivor"]
 collection = db["names"] 

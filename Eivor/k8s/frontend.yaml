@@ -1,0 +1,32 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: eivor-frontend
+spec:
+  selector:
+    matchLabels:
+      app: eivor-frontend
+  template:
+    metadata:
+      labels:
+        app: eivor-frontend
+    spec:
+      containers:
+      - name: eivor-frontend
+        image: docker.io/maazinahmed/eivor-frontend:v2
+        ports:
+        - containerPort: 5000
+        env:
+        - name: BACKEND_URL
+          value: http://eivor-backend.ezio.svc.cluster.local
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: eivor-frontend
+spec:
+  selector:
+    app: eivor-frontend
+  ports:
+  - port: 80
+    targetPort: 5000

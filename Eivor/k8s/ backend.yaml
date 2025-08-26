@@ -1,0 +1,33 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: eivor-backend
+spec:
+  selector:
+    matchLabels:
+      app: eivor-backend
+  template:
+    metadata:
+      labels:
+        app: eivor-backend
+    spec:
+      containers:
+      - name: eivor-backend
+        image: docker.io/maazinahmed/eivor-backend
+        ports:
+        - containerPort: 8000
+        env:
+        - name: MONGO_HOST
+          value: mongo.ezio.svc.cluster.local
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: eivor-backend
+spec:
+  selector:
+    app: eivor-backend
+  ports:
+  - port: 80
+    targetPort: 8000
+
